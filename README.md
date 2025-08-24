@@ -21,20 +21,26 @@ This is a minimal, self-contained Django project that grades essays and generate
 # 1) Create & activate a virtualenv (recommended)
 python -m venv .venv
 # Windows: .venv\Scripts\activate
-# Linux/Mac: source .venv/bin/activate
 
 # 2) Install dependencies
 pip install -r requirements.txt
 
 # 3) Migrate & run
 python manage.py migrate
-python manage.py createsuperuser  # optional for admin
+python manage.py createsuperuser 
 python manage.py runserver
 ```
+
 ## Project Layout
 - `manage.py` – Django entrypoint
 - `project/` – Django project settings/urls
 - `essays/` – The app with models, views, forms, grading utils, templates, and static assets
+- `static/` – Static assets
+- `staticfiles/` – Collected static files
+- `templates/` – HTML templates
+- `db.sqlite3` – SQLite database file
+- `requirements.txt` – Python dependencies
+- `README.md` – Documentation
 
 ## Notes
 - This grading system uses simple heuristics and is intended for demos/class projects. 
